@@ -713,32 +713,38 @@ Ser la plataforma de referencia en monitoreo lechero de precisión en Chile, int
 <a class="text-primary hover:text-secondary underline" href="https://drive.google.com/file/d/1rVJh-wwL3OHnHgZAOOFWMaG8yJnRcLVt/view" rel="noopener noreferrer" target="_blank">Ver Presentación</a>
 </p>
 </div>
-<!-- Formulario -->
-<div class="lg:w-1/3">
-<form action="/success.html" data-netlify="true" data-netlify-honeypot="bot-field" method="POST" name="contact">
-<!-- Campo oculto para el formulario -->
-<input name="form-name" type="hidden" value="contact"/>
-<!-- Campo anti-spam oculto -->
-<div style="display: none;">
-<label>No llenar si eres humano: <input name="bot-field"/></label>
-</div>
-<div class="mb-4">
-<label class="block text-gray-700 font-semibold mb-2" for="name">Nombre y Apellido</label>
-<input class="w-full p-3 border border-gray-300 rounded-md" id="name" name="name" required="" type="text"/>
-</div>
-<div class="mb-4">
-<label class="block text-gray-700 font-semibold mb-2" for="email">Email</label>
-<input class="w-full p-3 border border-gray-300 rounded-md" id="email" name="email" required="" type="email"/>
-</div>
-<div class="mb-4">
-<label class="block text-gray-700 font-semibold mb-2" for="message">Mensaje</label>
-<textarea class="w-full p-3 border border-gray-300 rounded-md" id="message" name="message" required="" rows="4"></textarea>
-</div>
-<button class="w-full bg-primary text-white font-bold py-3 px-6 rounded-md hover:bg-opacity-90 transition" type="submit">Enviar Mensaje</button>
-</form>
-<div class="mt-4 text-center" id="form-message"></div>
-</div>
-</div>
+
+<!-- Formulario Corregido -->
+<div class="lg:w-1/3 bg-gray-900/60 p-6 rounded-xl backdrop-blur-sm border border-white/20">
+  <form action="/success.html" data-netlify="true" data-netlify-honeypot="bot-field" method="POST" name="contact">
+    <!-- Campo oculto para el formulario -->
+    <input name="form-name" type="hidden" value="contact"/>
+    <!-- Campo anti-spam oculto -->
+    <div style="display: none;">
+      <label>No llenar si eres humano: <input name="bot-field"/></label>
+    </div>
+    
+    <div class="mb-4">
+      <label class="block text-white font-bold mb-2 text-shadow" for="name">Nombre y Apellido</label>
+      <!-- CORRECCIÓN AQUÍ: Agregado 'text-gray-900' y 'bg-white' -->
+      <input class="w-full p-3 border border-gray-300 rounded-md text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-green-500" id="name" name="name" required="" type="text" placeholder="Ej: Juan Pérez"/>
+    </div>
+    
+    <div class="mb-4">
+      <label class="block text-white font-bold mb-2 text-shadow" for="email">Email</label>
+      <!-- CORRECCIÓN AQUÍ: Agregado 'text-gray-900' y 'bg-white' -->
+      <input class="w-full p-3 border border-gray-300 rounded-md text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-green-500" id="email" name="email" required="" type="email" placeholder="contacto@ejemplo.com"/>
+    </div>
+    
+    <div class="mb-4">
+      <label class="block text-white font-bold mb-2 text-shadow" for="message">Mensaje</label>
+      <!-- CORRECCIÓN AQUÍ: Agregado 'text-gray-900' y 'bg-white' -->
+      <textarea class="w-full p-3 border border-gray-300 rounded-md text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-green-500" id="message" name="message" required="" rows="4" placeholder="Escribe tu consulta aquí..."></textarea>
+    </div>
+    
+    <button class="w-full bg-primary text-white font-bold py-3 px-6 rounded-md hover:bg-opacity-90 hover:scale-[1.02] transition-transform duration-200 shadow-lg" type="submit">Enviar Mensaje</button>
+  </form>
+  <div class="mt-4 text-center" id="form-message"></div>
 </div>
 </section>
 
