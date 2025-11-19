@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Algoritmo Animal - Automatización y Lechería de Precisión</title> <!-- Update with your name/brand -->
+<title>Algoritmo Animal - Automatización y Monitoreo</title> <!-- Update with your name/brand -->
 <!-- Chosen Palette: Warm Earth Tones -->
 <!-- Application Structure Plan: A single-page application (SPA) with a fixed navigation bar that smoothly scrolls to thematic sections (Inicio, Servicios, Sobre Mí, Casos de Éxito, Recursos, Contacto). This structure provides a fluid, modern user experience, allowing visitors to flow through the brand story without interruption. Key interactions include hover effects on service cards, a dynamic tab system for case studies, and a functional contact form. This design was chosen to build a personal brand narrative effectively and guide users logically from problem awareness to conversion (contact) within a single, engaging session. -->
 <!-- Visualization & Content Choices: Report Info: Service offerings -> Goal: Inform & Compare -> Viz/Presentation: Interactive cards with hover effects -> Interaction: Users hover to see more details -> Justification: Engaging and space-efficient way to present distinct services. | Report Info: Case Study -> Goal: Demonstrate Value -> Viz/Presentation: Tabbed content area -> Interaction: Users click tabs to switch between case studies -> Justification: Organizes detailed stories cleanly, preventing a long, cluttered page. | Report Info: Personal Bio -> Goal: Build Trust -> Viz/Presentation: Timeline layout with icons -> Interaction: Static visual flow -> Justification: Visually represents a professional journey effectively. Library/Method: All interactions are built with Vanilla JS and styled with Tailwind CSS. No SVG/Mermaid used. -->
@@ -133,29 +133,30 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 <body class="antialiased">
 <!-- Header & Navigation -->
 <header class="top-0 z-50 bg-white/80 shadow-sm sticky backdrop-blur-md bg-white/95" id="header">
-<nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+<nav class="container mx-auto px-6 py-4 flex justify-between items-center bg-transparent">
     
-<a class="text-2xl font-bold text-primary" href="#inicio">AiA (Algoritmo Animal)</a>
+<a class="text-3xl font-bold text-primary" href="#inicio">AiA (Algoritmo Animal)</a>
 <div class="hidden md:flex items-center space-x-8">
-<a class="nav-link text-black-100 border-b-2 border-transparent pb-1" href="#servicios">Servicios</a>
-<a class="nav-link text-black-900 border-b-2 border-transparent pb-1" href="#sobre-mi">Sobre Mí</a>
-<a class="nav-link text-black-600 border-b-2 border-transparent pb-1" href="#proyectos">Proyectos</a>
-<a class="nav-link text-black-600 border-b-2 border-transparent pb-1" href="#casos-exito">Casos de Éxito</a> 
-<a class="nav-link text-black-600 border-b-2 border-transparent pb-1" href="#recursos">Recursos</a>
-<a class="nav-link text-black-600 border-b-2 border-transparent pb-1" href="#contacto">Contacto</a>
+<a class="nav-link text-black-100 border-b-2 border-transparent pb-1 font-bold" href="#servicios">Servicios</a>
+<a class="nav-link text-black-900 border-b-2 border-transparent pb-1 font-bold" href="#sobre-nosotros">La empresa</a>
+<a class="nav-link text-black-600 border-b-2 border-transparent pb-1 font-bold" href="#proyectos">Proyectos</a>
+<a class="nav-link text-black-600 border-b-2 border-transparent pb-1 font-bold" href="#casos-exito">Casos de Éxito</a> 
+<a class="nav-link text-black-600 border-b-2 border-transparent pb-1 font-bold" href="#recursos">Recursos</a>
+<a class="nav-link text-black-600 border-b-2 border-transparent pb-1 font-bold" href="#contacto">Contacto</a>
 </div>
+</nav>
 <button class="md:hidden text-primary focus:outline-none" id="mobile-menu-button">
 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </button>
 </nav>
 <!-- Mobile Menu -->
 <div class="hidden md:hidden bg-white" id="mobile-menu">
-<a class="block text-center py-2 px-4 text-sm text-black-700 hover:bg-black-100 font-bold" href="#servicios">Servicios</a>
-<a class="block text-center py-2 px-4 text-sm text-black-700 hover:bg-black-100 font-bold" href="#sobre-mi">Sobre Mí</a>
-<a class="block text-center py-2 px-4 text-sm text-black-700 hover:bg-black-100 font-bold" href="#proyectos">Proyectos</a>
-<a class="block text-center py-2 px-4 text-sm text-black-700 hover:bg-black-100 font-bold" href="#casos-exito">Casos de Éxito</a>
-<a class="block text-center py-2 px-4 text-sm text-black-700 hover:bg-black-100 font-bold" href="#recursos">Recursos</a>
-<a class="block text-center py-2 px-4 text-sm text-black-700 hover:bg-black-100 font-bold" href="#contacto">Contacto</a>
+<a class="block text-center py-3 px-5 text-sm text-black-700 hover:bg-black-100 font-bold" href="#servicios">Servicios</a>
+<a class="block text-center py-3 px-5 text-sm text-black-700 hover:bg-black-100 font-bold" href="#sobre-mi">Sobre Mí</a>
+<a class="block text-center py-3 px-5 text-sm text-black-700 hover:bg-black-100 font-bold" href="#proyectos">Proyectos</a>
+<a class="block text-center py-3 px-5 text-sm text-black-700 hover:bg-black-100 font-bold" href="#casos-exito">Casos de Éxito</a>
+<a class="block text-center py-3 px-5 text-sm text-black-700 hover:bg-black-100 font-bold" href="#recursos">Recursos</a>
+<a class="block text-center py-3 px-5 text-sm text-black-700 hover:bg-black-100 font-bold" href="#contacto">Contacto</a>
 </div>
 </header>
 <main>
@@ -174,48 +175,48 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 
   <div class="relative container mx-auto px-7 text-center">
     <h1 class="text-4xl md:text-6xl font-bold text-secondary leading-tight mb-4">
-      Los Datos no deben abrumar, deben ayudar.<br/> Y resolver un problema.
+      Los Datos no deben abrumar,<br/> Deben ayudar. Y resolver un problema.
     </h1>
 
     <p class="text-lg md:text-xl text-black-700 max-w-3xl mx-auto mb-8">
-      <span class="font-bold">Simplificamos lo complejo</span>, los datos prediales al alcance de su mano.<br/>
+      <span class="font-bold">Simplificamos lo complejo</span>, los datos más cercas que nunca<br/>
       <span class="font-bold">Soluciones simples y prácticas</span> para ahorrar valioso tiempo.<br/>
-      <span class="font-bold">Eficiencia</span> para el sistema.
     </p>
 
     <a href="#contacto"
        class="bg-primary text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-opacity-90 transition duration-300">
-      Conversemos
+      Conversemos ☕
     </a>
 
-    <div class="mt-16 grid grid-cols-1 md:grid-cols-5 gap-10 max-w-6xl mx-auto">
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-4 gap-10 max-w-6xl mx-auto">
       <div class="text-center">
         <div class="text-4xl text-secondary mb-2">🕒</div>
-        <h3 class="font-semibold text-lg">¿Excesivo tiempo en planillas o reportes manuales?</h3>
+        <h3 class="font-semibold text-lg">¿Excesivo tiempo en planillas o reportes a mano?</h3>
       </div>
       <div class="text-center">
         <div class="text-4xl text-secondary mb-2">🐄</div>
-        <h3 class="font-semibold text-lg">¿La información llega muy justa o atrasada a los manejos?</h3>
+        <h3 class="font-semibold text-lg">¿Los datos llegan atrasados o no llegan a los manejos?</h3>
       </div>
       <div class="text-center">
         <div class="text-4xl text-secondary mb-2">📊</div>
-        <h3 class="font-semibold text-lg">¿Acumulas datos que no sabes cómo utilizar?</h3>
+        <h3 class="font-semibold text-lg">¿Muchos datos pero no tienes mucha información?</h3>
       </div>
       <div class="text-center">
         <div class="text-4xl text-secondary mb-2">💻</div>
-        <h3 class="font-semibold text-lg">¿Necesitas digitalización antes que la competencia?</h3>
-      </div>
-      <div class="text-center">
-        <div class="text-4xl text-secondary mb-2">🌍</div>
-        <h3 class="font-semibold text-lg">¿Quieres saber por donde empezar con la sustentabilidad?</h3>
+        <h3 class="font-semibold text-lg">¿Hay que digitalizar para no depender de una persona?</h3>
       </div>
     </div>
-  </div>
+    <!-- TEXTO A TODO ANCHO, NEGRITA, AZUL MARINO Y CURSIVA -->
+        <div style="width:100vw; margin-left:calc(50% - 50vw); background:transparent; margin-top: 4rem;">
+      <p style="color:#07108a; font-weight:700; font-style:italic; font-size:1.5rem; text-align:center; padding:1rem 0; margin:0;">
+        ¡ No es que no estén los datos, o que no sepan cómo hacerlo; es el tiempo y los errores que toma hacerlo bien !
+      </p>
+    </div>
 </section>
 
 <section id="servicios" class="px-6 py-20 bg-gradient-to-b from-gray-900 via-black to-gray-950 text-white">
   <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-green-400 to-lime-400">
-    Servicios Actualizados
+    Servicios modernos con los pies en el suelo
   </h2>
   <!-- Grid -->
   <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-2 max-w-6xl mx-auto">
@@ -224,15 +225,14 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
     <div class="card relative group rounded-2xl p-10 bg-gray-900 border border-gray-800 shadow-xl
                 hover:shadow-[0_0_20px_rgba(34,197,94,0.25)] transition transform hover:-translate-y-1">
     <div class="text-5xl mb-4">🐄</div>
-    <h3 class="text-2xl font-bold mb-4 text-teal-400">Monitoreo Lechero de Precisión</h3>
+    <h3 class="text-2xl font-bold mb-4 text-teal-400">Monitoreo de Precisión</h3>
     <p class="text-gray-300 mb-6">
         Para lecherías que buscan pragmatismo y eficiencia. Ahorre tiempo, reduzca errores y facilite el éxito de los manejos.
     </p>
     <ul class="space-y-3 text-base">
-        <li>⚡ Más práctico: decisiones más rápidas y precisas</li>
-        <li>⚡ Menos esfuerzo y más tiempo para otras tareas</li>
-        <li>⚡ Monitoreo: Alimentación, RCS, Productivo y Ranking</li>
-        <li>⚡ Análisis históricos y de tendencias</li>
+        <li>⚡ Menos esfuerzo: más decisiones más acciones precisas</li>
+        <li>⚡ Seguimiento: RCS, Productivo, Fertilidad y Ranking</li>
+        <li>⚡ Análisis históricos y de Tendencias comparativo</li>
     </ul>
     <!-- Botón / link de explorar (pestaña nueva) -->
     <a href="https://youtu.be/7nyVt-xG0ZQ"
@@ -249,15 +249,14 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
     <div class="relative group rounded-2xl p-10 bg-gray-900 border border-gray-800 shadow-xl
                 hover:shadow-[0_0_20px_rgba(34,197,94,0.25)] transition transform hover:-translate-y-1">
       <div class="text-5xl mb-4">🤖</div>
-      <h3 class="text-2xl font-bold mb-4 text-teal-400">Automatización de Reportes y Digitalización</h3>
-      <p class="text-gray-300 mb-6">Para PYMES de servicios, cooperativas o predios con desafíos de datos específicos e integración de datos complejos.</p>
+      <h3 class="text-2xl font-bold mb-4 text-teal-400">Automatización y Digitalización</h3>
+      <p class="text-gray-300 mb-6">Para PYMES de servicios, cooperativas o grupos con desafíos de integración de datos específicos o complejos.</p>
       <ul class="space-y-3 text-base">
         <li>⚡ Soluciones 100% personalizadas</li>
-        <li>⚡ Reducción en jornadas y tiempos de entrega</li>
-        <li>⚡ Implementación de soluciones digitales</li>
-        <li>⚡ Desarrollo de apps desde y para el sector</li>
+        <li>⚡ Gane tiempo, reduciendo jornadas y tiempos de entrega</li>
+        <li>⚡ Implementación de soluciones digitales o apps</li>
       </ul>
-      <a href=""
+      <a href="https://www.youtube.com/watch?v=oWeHLn2O9oA&t"
         target="_blank" rel="noopener noreferrer"
         class="inline-block mt-6 text-lg font-semibold text-teal-300 group-hover:text-white transition">
         Explorar →
@@ -272,14 +271,13 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
     <div class="relative group rounded-2xl p-10 bg-gray-900 border border-gray-800 shadow-xl
                 hover:shadow-[0_0_20px_rgba(34,197,94,0.25)] transition transform hover:-translate-y-1">
     <div class="text-5xl mb-4">🧬</div>
-        <h3 class="text-2xl font-bold mb-4 text-teal-400">Análisis genómicos y de genealogía</h3>
+        <h3 class="text-2xl font-bold mb-4 text-teal-400">Análisis genómicos o genealogía</h3>
         <p class="text-gray-300 mb-6">
         Esquemas de selección o asignación dirigida de hembras de forma temprana en base a datos o biotecnología.
         </p>
         <ul class="space-y-3 text-base">
-        <li>⚡ Plan y análisis PCR leche A2 (beta-caseína)</li>
-        <li>⚡ Plan y análisis PCR Kappa-caseína (BB)</li>
-        <li>⚡ Estudios de genealogía cruzado con PCR</li>
+        <li>⚡ Plan y análisis PCR Leche A2 o Beta-caseín</li>
+        <li>⚡ Plan y análisis PCR Quesos o Kappa-caseína</li>
         <li>⚡ Selección de madres, vqs y reproductores</li>
         </ul>
         <!-- Enlace que abre en pestaña nueva -->
@@ -300,7 +298,7 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
     <!-- Contenido por encima del overlay -->
     <div class="relative z-10">
         <div class="text-5xl mb-4">🌍</div>
-        <h3 class="text-2xl font-bold mb-4 text-teal-400">Asesorías en Certificación de Sustentabilidad</h3>
+        <h3 class="text-2xl font-bold mb-4 text-teal-400">Certificación de Sustentabilidad</h3>
         <p class="text-gray-300 mb-6">
         Para empresas que quieren supervisar el uso de recursos y/o prepararse para futuras normativas y exigencias.
         </p>
@@ -325,47 +323,60 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
   </div>
 </section>
 
-<!-- Service Card 5 -->
-<!--<div class="service-card bg-gray-50 rounded-lg p-8 border border-gray-200">
-                    <h3 class="text-2xl font-bold text-secondary mb-4">Consultoría en Transformación Digital</h3>
-                    <p class="text-gray-600 mb-4">Para empresas que buscan adoptar nuevas tecnologías y mejorar su competitividad.</p>
-                    <ul class="text-blue-600 space-y-2">
-                        <li class="flex items-center"><span class="text-primary mr-2">✓</span>Evaluación de necesidades tecnológicas</li>
-                        <li class="flex items-center"><span class="text-primary mr-2">✓</span>Implementación de soluciones digitales</li>
-                        <li class="flex items-center"><span class="text-primary mr-2">✓</span>Capacitación y soporte en softwares</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!-- Section 3: Sobre Mí -->
-<section class="py-40 bg-cover bg-center relative" id="sobre-mi" style="background-image: linear-gradient(rgba(93, 122, 103, 0.9), rgba(93, 122, 103, 0.9)), url('vacas caminando.jpeg');">
+<!-- SECCIÓN COMBINADA: Sobre Mí y Nuestra Empresa -->
+<section class="py-40 bg-cover bg-center relative" id="sobre-nosotros" style="background-image: linear-gradient(rgba(93, 122, 103, 0.9), rgba(93, 122, 103, 0.9)), url('vacas caminando.jpeg');">
 <!-- Overlay opcional para mejor legibilidad -->
 <div class="absolute inset-0 bg-black bg-opacity-20"></div>
 <div class="container mx-auto px-10 relative z-10">
 <div class="flex flex-col md:flex-row items-center gap-12">
 <div class="md:w-1/3 text-center">
 <img alt="Foto de Marcos Andrés Fernández" class="rounded-full w-60 h-64 mx-auto object-cover shadow-lg" decoding="async" src="mf_campo.png"/>
-<h3 class="text-3xl font-bold text-white mt-6">Marcos Andrés Fernández</h3>
-<p class="text-white font-semibold"> <b>Ingeniero Agrícola &amp; Msc. en Data Science <br/> Dipl. en Cambio Climático Silvoagropecuario <br/>Dipl. en Digitalización y gestión de empresas <br/>Auditor Certificación Sustentabilidad (Consorcio Lechero)</b></p>
+<h3 class="text-3xl font-bold text-gray-400 mt-6">Marcos Andrés Fernández</h3>
+<p class="text-white font-semibold"> <b>Ingeniero Agrícola &amp; Msc. en Data Science <br/> Dipl. en Cambio Climático Silvoagropecuario <br/>Auditor Certificación Sustentabilidad (Consorcio Lechero)</b></p>
 </div>
 <div class="md:w-2/3">
-<h2 class="text-4xl font-bold text-white mb-6 section-title">Mi misión: <br/>Unir el Campo con la Tecnología</h2>
+<h2 class="text-4xl font-bold text-white mb-6 section-title">Principio rector: <br/>Unir el Campo con la Tecnología</h2>
 <p class="text-lg text-white mb-4">Mi pasión fue traspasada por mis abuelos. Como Ingeniero Agrícola, viví en terreno los desafíos de la gestión diaria.
-                            Pero mi curiosidad por la tecnología me llevó a especializarme en Data Science. 
-                            Hoy, mis esfuerzos están en unir estos dos mundos, la tradición y la innovación, para ofrecer soluciones tecnológicas basadas en datos que sean realmente prácticas y útiles para el sector, fundamentadas en la ciencia y la sostenibilidad.</p>
+                            Mi curiosidad por la tecnología me llevó a especializarme en Data Science. 
+                            Hoy, mis esfuerzos están en unir estos dos mundos, la tradición y la innovación, para ofrecer soluciones tecnológicas basadas en datos que sean realmente prácticas y útiles, fundamentadas en la ciencia y enfocadas en la sostenibilidad.</p>
+                            
 <p class="text-lg text-yellow-500 font-semibold">"Simplificar la tecnología para ser aplicable al campo. Usar los datos e integrarlos para tomar decisiones rápidas, inteligentes y precisas. Mejorar la eficiencia al reducir los esfuerzos diarios para producir leche."</p>
 </div>
 </div>
 </div>
 </section>
-<!-- Section 4: Proyectos (NUEVA SECCIÓN) -->
+
+<!-- CONTINUACIÓN DE LA SECCIÓN: Nuestra Empresa (Misión y Visión) -->
+<section class="py-20 bg-green-80" id="nuestra-empresa">
+<div class="container mx-auto px-6">
+<div class="text-center mb-12">
+<h2 class="text-5xl font-bold text-primary section-title">Nuestra Empresa</h2>
+<p class="text-xl text-gray-600 mt-2 font-bold">Conoce nuestros principios y objetivos.</p>
+</div>
+<div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Misión -->
+<div class="bg-gray-50 p-8 rounded-lg border border-gray-200 shadow-lg">
+<h3 class="text-3xl font-bold text-secondary mb-4">Misión</h3>
+<p class="text-lg text-gray-700 leading-relaxed font-bold">
+Digitalizar y simplificar la gestión lechera mediante una plataforma en la nube que integra y personaliza datos dispersos para aumentar precisión, eficiencia al tomar decisiones oportunas, trazables y sostenibles, elevando la competitividad de empresas lecheras y sus redes técnicas.
+</p>
+</div>
+<!-- Visión -->
+<div class="bg-gray-50 p-8 rounded-lg border border-gray-200 shadow-lg">
+<h3 class="text-3xl font-bold text-secondary mb-4">Visión</h3>
+<p class="text-lg text-gray-700 leading-relaxed font-bold">
+Ser la plataforma de referencia en monitoreo lechero de precisión en Chile, interoperando con sensores, IoT y servicios del ecosistema de datos, escalando con aliados regionales y promoviendo una agro ganadería más eficiente, transparente y sustentable.
+</p>
+</div>
+</div>
+</section>
+
+<!-- Section 4: Proyectos-->
 <section class="section-soft py-20 bg-gray-50" id="proyectos">
 <div class="container mx-auto px-6">
 <div class="text-center mb-12">
-<h2 class="text-4xl font-bold text-primary section-title">Galería de Proyectos</h2>
-<p class="text-lg text-gray-600 mt-2">Conozca algunos de los proyectos adjudicados y en marcha de la empresa.</p>
+<h2 class="text-5xl font-bold text-primary section-title">Galería de Proyectos</h2>
+<p class="text-xl font-bold text-gray-600 mt-3">Conozca algunos de los proyectos adjudicados y en marcha de la empresa.</p>
 </div>
 <!-- CARRUSEL AQUÍ -->
 <div class="mb-12">
@@ -377,10 +388,10 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 <div class="w-full flex-shrink-0 relative">
 <img alt="Monitoreo Lechero" class="w-full h-[32rem] object-cover" decoding="async" loading="lazy" src="plataforma.png"/>
 <div class="absolute inset-0 bg-black bg-opacity-20 flex items-end">
-<div class="text-white p-6">
+<div class="text-black p-6">
 <h4 class="text-xl font-bold">App Monitoreo Lechero Precisión</h4>
-<p class="text-blue-500 font-bold">
-  Análisis y Reportes para seguimiento ágil</p>
+<p class="text-gray-500 font-bold">
+  Análisis y Reportes para seguimiento continuo</p>
 </div>
 </div>
 </div>
@@ -400,9 +411,9 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 <img alt="Automatización de procesos" class="w-full h-[32rem] object-cover" decoding="async" loading="lazy" src="automatizacion.png"/>
 <div class="absolute inset-0 bg-black bg-opacity-20 flex items-end">
 <div class="text-white p-6">
-<h4 class="text-xl font-bold">Automatización de procesos</h4>
+<h4 class="text-xl font-bold">Automatización procesos digitales</h4>
 <p class="text-blue-500 font-bold">
-    Generación automatizada de informes personalizados</p>
+    Generación automatizada de informes</p>
 </div>
 </div>
 </div>
@@ -411,7 +422,7 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 <img alt="Análisis genómico" class="w-full h-[32rem] object-cover" decoding="async" loading="lazy" src="lab.jpeg"/>
 <div class="absolute inset-0 bg-black bg-opacity-20 flex items-end">
 <div class="text-white p-6">
-<h4 class="text-xl font-bold">Análisis Genómico y Genealogía</h4>
+<h4 class="text-xl font-bold">Análisis Genómico o Pedigree</h4>
 <p class="text-blue-500 font-bold">
     Selección por biotecnología o datos históricos</p>
 </div>
@@ -433,9 +444,9 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 <img alt="En terreno 1" class="w-full h-[32rem] object-cover" decoding="async" loading="lazy" src="uniform.HEIC"/>
 <div class="absolute inset-0 bg-black bg-opacity-20 flex items-end">
 <div class="text-white p-6">
-<h4 class="text-xl font-bold">Integración y uso de herramientas digitales</h4>
+<h4 class="text-xl font-bold">Integración de herramientas digitales</h4>
 <p class="text-blue-500 font-bold">
-    Maximizar beneficios de softwares de gestión lechera</p>
+    Uso de softwares y dispositivos de gestión lechera</p>
 </div>
 </div>
 </div>
@@ -444,7 +455,7 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 <img alt="En terreno 2" class="w-full h-[32rem] object-cover" decoding="async" loading="lazy" src="charla.jpeg"/>
 <div class="absolute inset-0 bg-black bg-opacity-20 flex items-end">
 <div class="text-white p-6">
-<h4 class="text-xl font-bold">Integración del personal en nuevos procesos</h4>
+<h4 class="text-xl font-bold">Preparación del personal en procesos</h4>
 <p class="text-blue-500 font-bold">
     Compromiso e integración para flujos de trabajo efectivos</p>
 </div>
@@ -455,9 +466,9 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 <img alt="En terreno 3" class="w-full h-[32rem] object-cover" decoding="async" loading="lazy" src="vacas caminando.jpeg"/>
 <div class="absolute inset-0 bg-black bg-opacity-20 flex items-end">
 <div class="text-white p-6">
-<h4 class="text-xl font-bold">Producción de leche sostenible</h4>
+<h4 class="text-xl font-bold">Producción de Leche Sostenible</h4>
 <p class="text-blue-500 font-bold">
-    Sistemas lecheros basados en el pastoreo y bienestar animal</p>
+    Sistemas lecheros basados Sostenibles</p>
 </div>
 </div>
 </div>
@@ -501,7 +512,7 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 <div class="max-w-4xl mx-auto">
 <div class="border-b border-gray-200">
 <nav aria-label="Tabs" class="-mb-px flex space-x-8">
-<button class="tab active whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg" data-tab="caso1">Empresa de Medición</button>
+<button class="tab whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg text-gray-500" data-tab="caso1">Empresa de Medición</button>
 <button class="tab whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg text-gray-500" data-tab="caso2">Administrador Lechero</button>
 <button class="tab whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg text-gray-500" data-tab="caso3">Agrícola y Lechera</button>
 <button class="tab whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg text-gray-500" data-tab="caso4">Empresas Lecheras</button>
@@ -512,7 +523,7 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 <!-- Tab Content 1 -->
 <div class="tab-pane active" id="caso1">
 <div class="bg-gray-50 p-8 rounded-lg border border-gray-200">
-<h3 class="text-2xl font-bold text-secondary mb-2">Cliente: Empresa de Servicios, Región de Los Lagos</h3>
+<h3 class="text-2xl font-bold text-secondary mb-2"><span class="text-primary">Cliente:</span> Empresa de Servicios, Región de Los Lagos</h3>
 <p class="font-semibold text-gray-700 mb-4">Desafío: Procesos manuales, lentos y propensos a errores para generar reportes a sus clientes.</p>
 <p class="text-gray-600 mb-6">La solución fue desarrollar e implementar un prototipo de una App para automatizar el análisis con reportes personalizables, transformando su flujo de trabajo.</p>
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
@@ -530,7 +541,7 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 </div>
 </div>
 <div class="mt-6 border-t border-gray-200 pt-6">
-<p class="text-gray-700 italic">"Gracias a Marcos, ahora entendemos nuestros datos, hemos mejorado la satisfacción de los clientes y tenemos más tiempo para otras tareas."</p>
+<p class="text-gray-700 italic">"Ahora entendemos nuestros datos, hemos mejorado la satisfacción de los clientes y tenemos más tiempo para otras tareas."</p>
 <p class="text-right font-semibold text-secondary mt-2">- Encargado Operaciones</p>
 </div>
 </div>
@@ -538,13 +549,13 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 <!-- Tab Content 2-->
 <div class="tab-pane hidden" id="caso2">
 <div class="bg-gray-50 p-8 rounded-lg border border-gray-200">
-<h3 class="text-2xl font-bold text-secondary mb-2">Cliente: Empresa Lechera, Región de Los Ríos</h3>
+<h3 class="text-2xl font-bold text-secondary mb-2"><span class="text-primary">Cliente:</span> Empresa Lechera, Región de Los Ríos</h3>
 <p class="font-semibold text-gray-700 mb-4">Desafío: Bajo uso y utilidad de softwares de gestión lechera y excesivo tiempo en ingreso de datos.</p>
 <p class="text-gray-600 mb-6">La solución fue integrar el uso de tecnología en la gestión de datos para un mejor registro y control.</p>
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
 <div>
-<p class="text-3xl font-bold text-primary">90%</p>
-<p class="text-gray-600">Recolección de datos digitales o no.</p>
+<p class="text-3xl font-bold text-primary">Aprox. 90%</p>
+<p class="text-gray-600">Recolección de datos digitales.</p>
 </div>
 <div>
 <p class="text-3xl font-bold text-primary">4hrs/semana</p>
@@ -556,7 +567,7 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 </div>
 </div>
 <div class="mt-6 border-t border-gray-200 pt-6">
-<p class="text-gray-700 italic">"Gracias a Marcos, hemos logrado transformación digital que nos ha permitido ser más eficientes y usar mis datos para decisiones presentes y futuras."</p>
+<p class="text-gray-700 italic">"Hemos logrado transformación digital que nos ha permitido ser más eficientes y usar mis datos para decisiones presentes y futuras."</p>
 <p class="text-right font-semibold text-secondary mt-2">- Encargado predial</p>
 </div>
 </div>
@@ -564,9 +575,9 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 <!-- Tab Content 3-->
 <div class="tab-pane hidden" id="caso3">
 <div class="bg-gray-50 p-8 rounded-lg border border-gray-200">
-<h3 class="text-2xl font-bold text-secondary mb-2">Cliente: Empresas Lecheras, Región de Los Ríos</h3>
+<h3 class="text-2xl font-bold text-secondary mb-2"><span class="text-primary">Cliente:</span> Empresas Lecheras, Región de Los Ríos</h3>
 <p class="font-semibold text-gray-700 mb-4">Desafío: Implementar acciones para la Certificación de Sustentabilidad lechera.</p>
-<p class="text-gray-600 mb-6">La solución fue diseñar un plan de trabajo estructurado, claro y pertinente a las virtudes de cada predio.</p>
+<p class="text-gray-600 mb-6">La solución fue diseñar un plan de trabajo estructurado, claro y pertinente al estado del predio.</p>
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
 <div>
 <p class="text-3xl font-bold text-primary">1 mes</p>
@@ -582,7 +593,7 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 </div>
 </div>
 <div class="mt-6 border-t border-gray-200 pt-6">
-<p class="text-gray-700 italic">"Gracias a Marcos, usando el trabajo actual e integrando nuevas estrategias se hizo más claro y llevadero el proceso de Certificación."</p>
+<p class="text-gray-700 italic">"Usando el trabajo actual e integrando nuevas estrategias se hizo más claro y llevadero el proceso de Certificación."</p>
 <p class="text-right font-semibold text-secondary mt-2">- Propietarios</p>
 </div>
 </div>
@@ -590,8 +601,8 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 <!-- Tab Content 4 -->
 <div class="tab-pane hidden" id="caso4">
 <div class="bg-gray-50 p-8 rounded-lg border border-gray-200">
-<h3 class="text-2xl font-bold text-secondary mb-2">Clientes: Predios lecheros de la Región de Los Ríos y Los Lagos</h3>
-<p class="font-semibold text-gray-700 mb-4">Desafío: Excesivo tiempo y dificultades en la manipulación de datos para el análisis de manejos prácticos.</p>
+<h3 class="text-2xl font-bold text-secondary mb-2"><span class="text-primary">Clientes:</span> Predios lecheros de la Región de Los Ríos y Los Lagos</h3>
+<p class="font-semibold text-gray-700 mb-4">Desafío: Excesivo tiempo y dificultades en la manipulación de datos para análisis y acciones prácticas.</p>
 <p class="text-gray-600 mb-6">La solución fue la integración, automatización y gestión eficiente de datos para uso en terreno, pensando en los trabajadores y asesores</p>
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
 <div>
@@ -600,15 +611,15 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 </div>
 <div>
 <p class="text-3xl font-bold text-primary">8hrs</p>
-<p class="text-gray-600">Reducción de errores y tiempo en la manipulación de datos para terreno.</p>
+<p class="text-gray-600">Reducción de tiempo y errores en la gestión de datos para terreno.</p>
 </div>
 <div>
-<p class="text-3xl font-bold text-primary">Mayor</p>
-<p class="text-gray-600">Independencia en la toma de decisiones y selección.</p>
+<p class="text-3xl font-bold text-primary">Autonomía</p>
+<p class="text-gray-600">Independencia en la toma de decisiones e identificación.</p>
 </div>
 </div>
 <div class="mt-6 border-t border-gray-200 pt-6">
-<p class="text-gray-700 italic">"Gracias a Marcos, hemos mejorado el monitoreo, al detectar con rápidez y precisión problemas del rebaño."</p>
+<p class="text-gray-700 italic">"Hemos mejorado el monitoreo continuo, al detectar con certeza y precisión problemas del rebaño."</p>
 <p class="text-right font-semibold text-secondary mt-2">- Administradores y trabajadores</p>
 </div>
 </div>
@@ -617,7 +628,7 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 <div class="tab-pane hidden" id="caso5">
 <div class="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center">
 <h3 class="text-2xl font-bold text-secondary mb-2">En desarrollo...</h3>
-<p class="text-gray-600">Estamos documentando los efectos de este proyecto. ¡Vuelva pronto!</p>
+<p class="text-gray-600">Estamos documentando los efectos de este proyecto. En ejecución. ¡Vuelva pronto!</p>
 </div>
 </div>
 </div>
@@ -726,205 +737,266 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 <p class="text-sm text-gray-400 mt-1">Diseñado para ayudar al sector lechero del sur de Chile.</p>
 </div>
 </footer>
+
 <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Mobile menu toggle
-                const mobileMenuButton = document.getElementById('mobile-menu-button');
-                const mobileMenu = document.getElementById('mobile-menu');
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
+document.addEventListener('DOMContentLoaded', function() {
+    
+    /* =========================================
+       1. NAVEGACIÓN MÓVIL
+       ========================================= */
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    // Toggle menú
+    mobileMenuButton.addEventListener('click', (e) => {
+        e.stopPropagation(); // Evita cierre inmediato
+        mobileMenu.classList.toggle('hidden');
+    });
 
-                // Close mobile menu when a link is clicked
-                document.querySelectorAll('#mobile-menu a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                    });
-                });
+    // Cerrar menú al hacer click en un enlace
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
 
-                // Smooth scrolling for navigation links
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const targetId = this.getAttribute('href');
-                        const targetElement = document.querySelector(targetId);
-                        if (targetElement) {
-                            // Offset for fixed header
-                            const headerOffset = document.getElementById('header').offsetHeight;
-                            const elementPosition = targetElement.getBoundingClientRect().top;
-                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    // Cerrar menú al hacer click fuera
+    document.addEventListener('click', (e) => {
+        if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
 
-                            window.scrollTo({
-                                top: offsetPosition,
-                                behavior: "smooth"
-                            });
-                        }
-                    });
-                });
+    /* =========================================
+       2. SCROLL SUAVE & ACTIVE LINKS
+       ========================================= */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                const headerOffset = document.getElementById('header').offsetHeight;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+            }
+        });
+    });
 
-                // Active nav link highlighting on scroll
-                const sections = document.querySelectorAll('section');
-                const navLinks = document.querySelectorAll('.nav-link');
-                window.addEventListener('scroll', () => {
-                    let current = '';
-                    const headerOffset = document.getElementById('header').offsetHeight;
-                    sections.forEach(section => {
-                        const sectionTop = section.offsetTop - headerOffset - 50; // Adjusted offset
-                        if (pageYOffset >= sectionTop) {
-                            current = section.getAttribute('id');
-                        }
-                    });
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    window.addEventListener('scroll', () => {
+        let current = '';
+        const headerOffset = document.getElementById('header').offsetHeight;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - headerOffset - 100;
+            if (pageYOffset >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
 
-                    navLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href').includes(current)) {
-                            link.classList.add('active');
-                        }
-                    });
-                });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            // Coincidencia exacta o parcial segura
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
 
-                // Case Study Tabs
-                const tabs = document.querySelectorAll('.tab');
-                const tabPanes = document.querySelectorAll('.tab-pane');
-                tabs.forEach(tab => {
-                    tab.addEventListener('click', () => {
-                        const target = tab.getAttribute('data-tab');
-                        
-                        tabs.forEach(t => t.classList.remove('active'));
-                        tab.classList.add('active');
-                        
-                        tabPanes.forEach(pane => {
-                            if (pane.id === target) {
-                                pane.classList.remove('hidden');
-                                pane.classList.add('active');
-                            } else {
-                                pane.classList.add('hidden');
-                                pane.classList.remove('active');
-                            }
-                        });
-                    });
-                });
+        // Botón "Volver arriba"
+        const toTop = document.getElementById('toTop');
+        if(toTop) {
+            if (window.scrollY > 600) toTop.style.display = 'block';
+            else toTop.style.display = 'none';
+        }
+    });
+    
+    // Funcionalidad botón volver arriba
+    const toTopBtn = document.getElementById('toTop');
+    if(toTopBtn) {
+        toTopBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+        // Estilos iniciales para el botón (si no están en CSS)
+        toTopBtn.style.display = 'none'; 
+        toTopBtn.style.position = 'fixed';
+        toTopBtn.style.bottom = '20px';
+        toTopBtn.style.right = '20px';
+        toTopBtn.style.zIndex = '100';
+    }
 
-                // ============ AGREGAR ESTE CÓDIGO DEL CARRUSEL ============
-                
-                // Carousel functionality
-                let currentSlide = 0;
-                const slides = document.querySelectorAll('#carousel-track > div');
-                const totalSlides = slides.length;
-                const track = document.getElementById('carousel-track');
-                const indicators = document.querySelectorAll('.carousel-indicator');
-                
-                function updateCarousel() {
-                    const translateX = -currentSlide * 100;
-                    track.style.transform = `translateX(${translateX}%)`;
-                    
-                    // Update indicators
-                    indicators.forEach((indicator, index) => {
-                        if (index === currentSlide) {
-                            indicator.classList.remove('bg-gray-300');
-                            indicator.classList.add('bg-primary');
-                        } else {
-                            indicator.classList.remove('bg-primary');
-                            indicator.classList.add('bg-gray-300');
-                        }
-                    });
+    /* =========================================
+       3. TABS (CASOS DE ÉXITO) CON FADE
+       ========================================= */
+    const tabs = document.querySelectorAll('.tab');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    
+    // Agregar clases de transición CSS dinámicamente si no existen
+    const styleSheet = document.createElement("style");
+    styleSheet.innerText = `
+        .tab-pane { opacity: 0; transition: opacity 0.4s ease-in-out; display: none; }
+        .tab-pane.active { display: block; }
+        .tab-pane.fade-in { opacity: 1; }
+    `;
+    document.head.appendChild(styleSheet);
+
+    // Inicializar el primer tab visible
+    if(tabPanes.length > 0) setTimeout(() => tabPanes[0].classList.add('fade-in'), 10);
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.getAttribute('data-tab');
+            
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            tabPanes.forEach(pane => {
+                if (pane.id === target) {
+                    pane.classList.add('active');
+                    // Pequeño delay para permitir que el display:block se renderice antes de la opacidad
+                    setTimeout(() => pane.classList.add('fade-in'), 10);
+                } else {
+                    pane.classList.remove('fade-in');
+                    pane.classList.remove('active'); // Se oculta tras la transición si se maneja con timeout, aquí simple
                 }
-                
-                function nextSlide() {
-                    currentSlide = (currentSlide + 1) % totalSlides;
-                    updateCarousel();
-                }
-                
-                function prevSlide() {
-                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-                    updateCarousel();
-                }
-                
-                // Event listeners para los botones
-                const nextBtn = document.getElementById('next-btn');
-                const prevBtn = document.getElementById('prev-btn');
-                
-                if (nextBtn && prevBtn) {
-                    nextBtn.addEventListener('click', nextSlide);
-                    prevBtn.addEventListener('click', prevSlide);
-                }
-                
-                // Indicator clicks
-                indicators.forEach((indicator, index) => {
-                    indicator.addEventListener('click', () => {
-                        currentSlide = index;
-                        updateCarousel();
-                    });
-                });
-                
-                // Auto-play
-                let autoPlay = setInterval(nextSlide, 6000);
-                
-                // Pausar auto-play al hacer hover
-                const carousel = document.getElementById('carousel');
-                if (carousel) {
-                    carousel.addEventListener('mouseenter', () => {
-                        clearInterval(autoPlay);
-                    });
-                    
-                    carousel.addEventListener('mouseleave', () => {
-                        autoPlay = setInterval(nextSlide, 6000);
-                    });
-                }
-                
-                // ============ FIN DEL CÓDIGO DEL CARRUSEL ============
-
-                // Contact Form Submission (REEMPLAZAR líneas ~780-792)
-                const contactForm = document.querySelector('form[name="contact"]');
-                const formMessage = document.getElementById('form-message');
-
-                contactForm.addEventListener('submit', function(e) {
-                    // No prevenir el submit - dejar que Netlify lo maneje
-                    formMessage.textContent = 'Enviando mensaje...';
-                    formMessage.className = 'text-blue-600';
-                    formMessage.textContent = 'Mensaje enviado con éxito.';
-                    formMessage.classList.remove('text-blue-600');
-                    formMessage.classList.add('text-green-600');
-
-                    // Netlify procesará automáticamente el formulario
-                    // y puede redirigir a una página de éxito o regresar aquí
-                });
             });
-    </script></main><a class="fab-cta bg-primary text-white shadow-lg hover:opacity-90 transition no-underline" href="#contacto">Conversemos</a><button aria-label="Volver arriba" class="bg-white border border-gray-200 rounded-full p-3 shadow-lg" id="toTop">↑</button><script>
-// Mejoras suaves (inserción automática)
-(function(){
-  // Volver arriba visible tras scroll
-  var toTop = document.getElementById('toTop');
-  if (toTop){
-    window.addEventListener('scroll', function(){
-      if (window.scrollY > 600) { toTop.classList.add('show'); } else { toTop.classList.remove('show'); }
+        });
     });
-    toTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
-  }
 
-  // Accesibilidad básica carrusel si existe
-  var carousel = document.getElementById('carousel');
-  if (carousel){
-    carousel.setAttribute('role','region');
-    carousel.setAttribute('aria-roledescription','carrusel');
-    document.addEventListener('keydown', function(e){
-      if (e.key === 'ArrowRight') { try { nextSlide(); } catch(_){} }
-      if (e.key === 'ArrowLeft') { try { prevSlide(); } catch(_){} }
+    /* =========================================
+       4. CARRUSEL (TOUCH + TECLADO)
+       ========================================= */
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('#carousel-track > div');
+    const totalSlides = slides.length;
+    const track = document.getElementById('carousel-track');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+    let autoPlay;
+
+    function updateCarousel() {
+        const translateX = -currentSlide * 100;
+        track.style.transform = `translateX(${translateX}%)`;
+        
+        indicators.forEach((indicator, index) => {
+            if (index === currentSlide) {
+                indicator.classList.remove('bg-gray-300');
+                indicator.classList.add('bg-primary');
+            } else {
+                indicator.classList.remove('bg-primary');
+                indicator.classList.add('bg-gray-300');
+            }
+        });
+    }
+    
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+    }
+    
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    }
+
+    // Listeners Botones
+    const nextBtn = document.getElementById('next-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); resetTimer(); });
+    if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); resetTimer(); });
+
+    // Listeners Indicadores
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentSlide = index;
+            updateCarousel();
+            resetTimer();
+        });
     });
-  }
-})();
-</script><script>
-  
-// Hacer tarjetas 'clicables' si tienen un solo enlace interno y abrir en nueva pestaña
-document.querySelectorAll('.card, .shadow, .shadow-md').forEach(function(card){
-  var link = card.querySelector('a[href]');
-  if (link){
-    card.style.cursor = 'pointer';
-    card.addEventListener('click', function(e){
-      // Solo activar si el clic NO es en un enlace
-      if(e.target.closest('a')) return;
-      window.open(link.href, '_blank', 'noopener');
+
+    // Auto Play
+    function startTimer() { autoPlay = setInterval(nextSlide, 6000); }
+    function resetTimer() { clearInterval(autoPlay); startTimer(); }
+    startTimer();
+
+    // Pausa en Hover
+    const carousel = document.getElementById('carousel');
+    if (carousel) {
+        carousel.addEventListener('mouseenter', () => clearInterval(autoPlay));
+        carousel.addEventListener('mouseleave', startTimer);
+        
+        // Soporte Teclado (Flechas)
+        document.addEventListener('keydown', function(e) {
+             // Solo si el carrusel está visible en viewport (opcional, aquí simple)
+            if (e.key === 'ArrowRight') { nextSlide(); resetTimer(); }
+            if (e.key === 'ArrowLeft') { prevSlide(); resetTimer(); }
+        });
+
+        // Soporte Touch (Swipe) para móviles
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+
+        carousel.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, {passive: true});
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) { nextSlide(); resetTimer(); } // Swipe Izquierda
+            if (touchEndX > touchStartX + 50) { prevSlide(); resetTimer(); } // Swipe Derecha
+        }
+    }
+
+    /* =========================================
+       5. TARJETAS CLICABLES
+       ========================================= */
+    document.querySelectorAll('.card, .shadow-xl').forEach(function(card){
+        const link = card.querySelector('a[href]');
+        if (link){
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', function(e){
+                if(e.target.closest('a')) return; // Si ya hizo click en el link, no duplicar
+                window.open(link.href, '_blank', 'noopener');
+            });
+        }
     });
-  }
+
+    /* =========================================
+       6. FORMULARIO (AJAX NETLIFY)
+       ========================================= */
+    const contactForm = document.querySelector('form[name="contact"]');
+    const formMessage = document.getElementById('form-message');
+
+    if(contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita la redirección
+            
+            formMessage.textContent = 'Enviando mensaje...';
+            formMessage.className = 'text-blue-600 font-bold mt-2';
+
+            const formData = new FormData(contactForm);
+            
+            fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(() => {
+                formMessage.textContent = '¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.';
+                formMessage.className = 'text-green-600 font-bold mt-2';
+                contactForm.reset();
+            })
+            .catch((error) => {
+                formMessage.textContent = 'Hubo un error al enviar. Por favor intenta por WhatsApp.';
+                formMessage.className = 'text-red-600 font-bold mt-2';
+                console.error(error);
+            });
+        });
+    }
 });
-</script></body></html>
+</script>
+</body></html>
