@@ -692,13 +692,37 @@ Ser la plataforma de referencia en monitoreo lechero de precisión en Chile, int
 
 </div>
 <div class="mt-12 bg-primary text-white p-8 rounded-lg max-w-3xl mx-auto">
-<h3 class="text-2xl font-bold">Checklist para un Monitoreo Lechero de Precisión</h3>
-<p class="mt-2 mb-4">Una herramienta práctica para evaluar y mejorar sus procesos de gestión de rebaño a tiempo.</p>
-<form class="flex flex-col sm:flex-row gap-2 justify-center">
-<input class="w-full sm:w-auto flex-grow p-3 rounded-md text-gray-800" placeholder="Su correo electrónico" required="" type="email"/>
-<button class="bg-secondary text-white font-bold py-3 px-6 rounded-md hover:bg-opacity-90 transition" type="submit">Descargar Ahora</button>
-</form>
-</div>
+  <h3 class="text-2xl font-bold">Checklist para un Monitoreo Lechero de Precisión</h3>
+  <p class="mt-2 mb-4">Una herramienta práctica para evaluar y mejorar sus procesos de gestión de rebaño a tiempo.</p>
+  
+  <!-- CAMBIOS IMPORTANTES AQUÍ -->
+  <form 
+    name="descarga-checklist" 
+    method="POST" 
+    data-netlify="true" 
+    action="checklist_monitoreo.pdf" 
+    target="_blank"
+    class="flex flex-col sm:flex-row gap-2 justify-center"
+  >
+    <!-- Campo oculto necesario para Netlify -->
+    <input type="hidden" name="form-name" value="descarga-checklist" />
+    
+    <input 
+      class="w-full sm:w-auto flex-grow p-3 rounded-md text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-secondary" 
+      name="email" 
+      placeholder="Su correo electrónico" 
+      required="" 
+      type="email"
+    />
+    
+    <button 
+      class="bg-secondary text-white font-bold py-3 px-6 rounded-md hover:bg-opacity-90 hover:scale-105 transition-transform shadow-md whitespace-nowrap" 
+      type="submit"
+    >
+      Descargar Ahora
+    </button>
+  </form>
+  <p class="text-xs text-white/70 mt-2">El acceso al archivo es inmediato tras ingresar su correo.</p>
 </div>
 </section>
 
