@@ -695,13 +695,12 @@ Ser la plataforma de referencia en monitoreo lechero de precisión en Chile, int
   <h3 class="text-2xl font-bold">Checklist para un Monitoreo Lechero de Precisión</h3>
   <p class="mt-2 mb-4">Una herramienta práctica para evaluar y mejorar sus procesos de gestión de rebaño a tiempo.</p>
   
-  <!-- CAMBIOS IMPORTANTES AQUÍ -->
+  <!-- FORMULARIO SIN ACTION (Lo manejamos con JS abajo) -->
   <form 
+    id="checklistForm"
     name="descarga-checklist" 
     method="POST" 
     data-netlify="true" 
-    action="checklist_monitoreo.pdf" 
-    target="_blank"
     class="flex flex-col sm:flex-row gap-2 justify-center"
   >
     <!-- Campo oculto necesario para Netlify -->
@@ -716,14 +715,57 @@ Ser la plataforma de referencia en monitoreo lechero de precisión en Chile, int
     />
     
     <button 
-      class="bg-secondary text-white font-bold py-3 px-6 rounded-md hover:bg-opacity-90 hover:scale-105 transition-transform shadow-md whitespace-nowrap" 
+      id="submitBtn"
+      class="bg-secondary text-white font-bold py-3 px-6 rounded-md hover:bg-opacity-90 hover:scale-105 transition-transform shadow-md whitespace-nowrap flex justify-center items-center" 
       type="submit"
     >
-      Descargar Ahora
+      <span>Descargar Ahora</span>
     </button>
   </form>
-  <p class="text-xs text-white/70 mt-2">El acceso al archivo es inmediato tras ingresar su correo.</p>
+  <p class="text-xs text-white/70 mt-2">El archivo se abrirá en una nueva pestaña tras ingresar su correo.</p>
 </div>
+
+<!-- SCRIPT ESPECÍFICO PARA ESTE FORMULARIO -->
+<script>
+  document.getElementById('checklistForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // 1. Detenemos el envío "feo" que rompe el PDF
+      
+      const form = e.target;
+      const formData = new FormData(form);
+      const btn = document.getElementById('submitBtn');
+      const originalText = btn.innerHTML;
+
+      // Cambiar texto del botón para feedback visual
+      btn.innerHTML = "Procesando...";
+      btn.disabled = true;
+
+      // 2. Enviamos los datos a Netlify usando FETCH (en segundo plano)
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      })
+      .then(() => {
+        // 3. SI TODO SALE BIEN: Abrimos el PDF como un enlace limpio (GET)
+        // Esto asegura que se vea bien y no salga el código raro
+        window.open('checklist-monitoreo.pdf', '_blank');
+        
+        // Resetear formulario
+        btn.innerHTML = "¡Listo!";
+        form.reset();
+        
+        setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+        }, 3000);
+      })
+      .catch((error) => {
+        console.error(error);
+        btn.innerHTML = "Error";
+        alert("Hubo un error al procesar. Intenta de nuevo.");
+      });
+  });
+</script>
 </section>
 
 <!-- Section 7: Contacto -->
