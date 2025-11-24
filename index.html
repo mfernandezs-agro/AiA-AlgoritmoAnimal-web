@@ -5,6 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Algoritmo Animal - Automatización y Monitoreo</title> <!-- Update with your name/brand -->
+<link rel="icon" type="image/jpeg" href="logo.jpeg">
 <!-- Chosen Palette: Warm Earth Tones -->
 <!-- Application Structure Plan: A single-page application (SPA) with a fixed navigation bar that smoothly scrolls to thematic sections (Inicio, Servicios, Sobre Mí, Casos de Éxito, Recursos, Contacto). This structure provides a fluid, modern user experience, allowing visitors to flow through the brand story without interruption. Key interactions include hover effects on service cards, a dynamic tab system for case studies, and a functional contact form. This design was chosen to build a personal brand narrative effectively and guide users logically from problem awareness to conversion (contact) within a single, engaging session. -->
 <!-- Visualization & Content Choices: Report Info: Service offerings -> Goal: Inform & Compare -> Viz/Presentation: Interactive cards with hover effects -> Interaction: Users hover to see more details -> Justification: Engaging and space-efficient way to present distinct services. | Report Info: Case Study -> Goal: Demonstrate Value -> Viz/Presentation: Tabbed content area -> Interaction: Users click tabs to switch between case studies -> Justification: Organizes detailed stories cleanly, preventing a long, cluttered page. | Report Info: Personal Bio -> Goal: Build Trust -> Viz/Presentation: Timeline layout with icons -> Interaction: Static visual flow -> Justification: Visually represents a professional journey effectively. Library/Method: All interactions are built with Vanilla JS and styled with Tailwind CSS. No SVG/Mermaid used. -->
@@ -174,13 +175,21 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
   <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-[#FDFBF8]"></div>
 
   <div class="relative container mx-auto px-7 text-center">
+    <!-- INICIO LOGO CENTRAL -->
+    <img 
+        src="logo.jpeg" 
+        alt="Logo Algoritmo Animal" 
+        class="mx-auto w-56 h-auto mb-7 mix-blend-multiply filter contrast-125"
+    />
+    <!-- FIN LOGO CENTRAL -->
+
     <h1 class="text-4xl md:text-6xl font-bold text-secondary leading-tight mb-4">
       Los Datos no deben abrumar,<br/> Deben ayudar. Y resolver un problema.
     </h1>
 
     <p class="text-lg md:text-xl text-black-700 max-w-3xl mx-auto mb-8">
-      <span class="font-bold">Simplificamos lo complejo</span>, los datos más cercas que nunca<br/>
-      <span class="font-bold">Soluciones simples y prácticas</span> para ahorrar valioso tiempo.<br/>
+      <span class="font-bold">Simplificamos lo complejo</span>, los datos más cercas que nunca.<br/>
+      <span class="font-bold">Soluciones simples </span> para ahorrar valioso tiempo.<br/>
     </p>
 
     <a href="#contacto"
@@ -217,20 +226,24 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
     
     </div>
 
-    <!-- TEXTO A TODO ANCHO, NEGRITA, AZUL MARINO Y CURSIVA -->
-        <div style="width:100vw; margin-left:calc(50% - 50vw); background:transparent; margin-top: 4rem;">
-      <p style="color:#07108a; font-weight:700; font-style:italic; font-size:1.5rem; text-align:center; padding:1rem 0; margin:0;">
-        ¡ No es que no estén los datos, o que no sepan cómo hacerlo; es el tiempo y los errores que toma hacerlo bien !
-      </p>
-    </div>
 </section>
 
 <section id="servicios" class="px-6 py-20 bg-gradient-to-b from-gray-900 via-black to-gray-950 text-white">
-  <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-green-400 to-lime-400">
+  
+  <!-- CAMBIO 1: Cambié 'mb-16' por 'mb-4' para reducir el espacio debajo del título -->
+  <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-2 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-green-400 to-lime-400">
     Servicios modernos con los pies en el suelo
   </h2>
-  <!-- Grid -->
-  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-2 max-w-6xl mx-auto">
+
+  <!-- CAMBIO 2: Cambié 'margin-top: 1.5rem' a 'margin-top: 0' -->
+  <div style="width:100vw; margin-left:calc(50% - 50vw); background:transparent; margin-top: 0;">
+    <p style="color:#ccccd6; font-weight:750; font-style:normal; font-size:1rem; text-align:center; padding:1rem 0; margin:0;">
+      ¡ No es que no estén los datos, o que no sepan cómo hacerlo. Es el tiempo y errores que toma hacerlo bien !
+    </p>
+  </div>
+
+  <!-- Grid (Agregué un mt-8 aquí para que las tarjetas no se peguen al texto de arriba) -->
+  <div class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-2 max-w-6xl mx-auto">
 
     <!-- Service Card 1 -->
     <div class="card relative group rounded-2xl p-10 bg-gray-900 border border-gray-800 shadow-xl
