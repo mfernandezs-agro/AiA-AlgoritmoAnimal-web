@@ -132,38 +132,50 @@ tbody tr{ background:white; box-shadow: 0 8px 20px rgba(0,0,0,.04); }
 tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
 </style></head>
 <body class="antialiased">
+
 <!-- Header & Navigation -->
 <header class="top-0 z-50 bg-white/80 shadow-sm sticky backdrop-blur-md bg-white/95" id="header">
-<nav class="container mx-auto px-6 py-4 flex justify-between items-center bg-transparent">
-    
-<div class="flex items-center space-x-4">
-<a class="text-3xl font-bold text-primary" href="#inicio">AiA Algoritmo Animal</a>
-<a class="text-lg font-semibold text-secondary" href="#inicio">Lechería de Precisión</a>
-</div>
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center bg-transparent relative">
+        
+        <!-- Logo Text y Slogan -->
+        <div class="flex items-center space-x-2 md:space-x-4">
+            <a class="text-3xl font-bold text-primary" href="#inicio">AiA </a>
+            <a class="text-sm md:text-lg font-semibold text-primary whitespace-nowrap" href="#inicio">Algoritmo Animal</a>
+            <!-- Ajuste de texto para móvil (text-sm) y escritorio (text-lg) -->
+            <a class="text-sm md:text-lg font-semibold text-secondary whitespace-nowrap" href="#inicio">Lechería de Precisión</a>
+        </div>
 
-<div class="hidden md:flex items-center space-x-8">
-<a class="nav-link text-black-100 border-b-2 border-transparent pb-1 font-bold" href="#servicios">Servicios</a>
-<a class="nav-link text-black-900 border-b-2 border-transparent pb-1 font-bold" href="#sobre-nosotros">La empresa</a>
-<a class="nav-link text-black-600 border-b-2 border-transparent pb-1 font-bold" href="#proyectos">Proyectos</a>
-<a class="nav-link text-black-600 border-b-2 border-transparent pb-1 font-bold" href="#casos-exito">Casos de Éxito</a> 
-<a class="nav-link text-black-600 border-b-2 border-transparent pb-1 font-bold" href="#recursos">Recursos</a>
-<a class="nav-link text-black-600 border-b-2 border-transparent pb-1 font-bold" href="#contacto">Contacto</a>
-</div>
-</nav>
-<button class="md:hidden text-primary focus:outline-none" id="mobile-menu-button">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</nav>
-<!-- Mobile Menu -->
-<div class="hidden md:hidden bg-white" id="mobile-menu">
-<a class="block text-center py-3 px-5 text-sm text-black-700 hover:bg-black-100 font-bold" href="#servicios">Servicios</a>
-<a class="block text-center py-3 px-5 text-sm text-black-700 hover:bg-black-100 font-bold" href="#sobre-nosotros">La empresa</a>
-<a class="block text-center py-3 px-5 text-sm text-black-700 hover:bg-black-100 font-bold" href="#proyectos">Proyectos</a>
-<a class="block text-center py-3 px-5 text-sm text-black-700 hover:bg-black-100 font-bold" href="#casos-exito">Casos de Éxito</a>
-<a class="block text-center py-3 px-5 text-sm text-black-700 hover:bg-black-100 font-bold" href="#recursos">Recursos</a>
-<a class="block text-center py-3 px-5 text-sm text-black-700 hover:bg-black-100 font-bold" href="#contacto">Contacto</a>
-</div>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+            <a class="nav-link text-black-100 border-b-2 border-transparent pb-1 font-bold" href="#servicios">Servicios</a>
+            <a class="nav-link text-black-900 border-b-2 border-transparent pb-1 font-bold" href="#sobre-nosotros">La empresa</a>
+            <a class="nav-link text-black-600 border-b-2 border-transparent pb-1 font-bold" href="#proyectos">Proyectos</a>
+            <a class="nav-link text-black-600 border-b-2 border-transparent pb-1 font-bold" href="#casos-exito">Casos de Éxito</a> 
+            <a class="nav-link text-black-600 border-b-2 border-transparent pb-1 font-bold" href="#recursos">Recursos</a>
+            <a class="nav-link text-black-600 border-b-2 border-transparent pb-1 font-bold" href="#contacto">Contacto</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-primary focus:outline-none" id="mobile-menu-button">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Dropdown (CORREGIDO: Absolute y Full width) -->
+    <div class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100" id="mobile-menu">
+        <div class="flex flex-col py-2">
+            <a class="block text-center py-4 px-5 text-sm text-gray-700 hover:bg-gray-100 font-bold border-b border-gray-50" href="#servicios">Servicios</a>
+            <a class="block text-center py-4 px-5 text-sm text-gray-700 hover:bg-gray-100 font-bold border-b border-gray-50" href="#sobre-nosotros">La empresa</a>
+            <a class="block text-center py-4 px-5 text-sm text-gray-700 hover:bg-gray-100 font-bold border-b border-gray-50" href="#proyectos">Proyectos</a>
+            <a class="block text-center py-4 px-5 text-sm text-gray-700 hover:bg-gray-100 font-bold border-b border-gray-50" href="#casos-exito">Casos de Éxito</a>
+            <a class="block text-center py-4 px-5 text-sm text-gray-700 hover:bg-gray-100 font-bold border-b border-gray-50" href="#recursos">Recursos</a>
+            <a class="block text-center py-4 px-5 text-sm text-gray-700 hover:bg-gray-100 font-bold" href="#contacto">Contacto</a>
+        </div>
+    </div>
 </header>
+
 <main>
     
 <!-- Section 1: Inicio -->
@@ -183,7 +195,7 @@ tbody td{ padding:.8rem .75rem; border-top:1px solid #F1F5F9; }
     <img 
         src="logo.jpeg" 
         alt="Logo Algoritmo Animal"
-        class="mx-auto w-66 h-auto mb-3 mt-[-8rem] mix-blend-multiply filter contrast-125"
+        class="mx-auto w-66 h-auto mb-4 mt-[-8rem] mix-blend-multiply filter contrast-125"
         
     />
     <!-- FIN LOGO CENTRAL -->
