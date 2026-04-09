@@ -246,8 +246,16 @@
     #contacto a[href^="tel:"],
     a[href*="wa.me"] {
       color: var(--primary) !important;
-      text-decoration: underline;
       font-weight: 600;
+    }
+
+    #contacto a[href^="mailto:"] {
+      text-decoration: none;
+    }
+
+    #contacto a[href^="tel:"],
+    a[href*="wa.me"] {
+      text-decoration: underline;
     }
 
     /* Anclas: evitar que el sticky tape el título */
@@ -386,7 +394,7 @@
           <span class="font-bold text-gray-900"> </span>No es necesario más sensores, datos o personas para más
           precisión.<br /><br />
           <span class="font-bold text-gray-900"> Gestión de datos inteligente.</span>
-          Liberamos tiempo y recursos para decisiones más confiables. Conectamos terreno, datos y personas.
+          Liberamos tiempo y recursos para decisiones confiables. Conectamos terreno, datos y personas.
         </p>
 
         <a href="#contacto"
@@ -443,8 +451,7 @@
             <div
               class="text-5xl text-secondary mb-4 transition-transform duration-300 group-hover:-rotate-12 group-hover:scale-110 inline-block">
               📈</div>
-            <h3 class="font-bold text-gray-800 text-lg leading-tight">¿Usas tus registros solo para consultas y fechas
-              predeterminadas?</h3>
+            <h3 class="font-bold text-gray-800 text-lg leading-tight">¿Usas tus registros solo para consultas y fechas génericas?</h3>
           </div>
 
         </div>
@@ -465,16 +472,16 @@
 
         <!-- PARTE 1: La Trampa de la Adopción (Problema) -->
         <div class="text-center max-w-4xl mx-auto mb-16">
-          <span class="text-red-700 font-black tracking-widest text-2xl uppercase mb-4 block">El Gran Desafío Futuro del
+          <span class="text-red-700 font-black tracking-widest text-2xl uppercase mb-4 block">El Desafío Futuro del
             Rubro</span>
 
           <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">Mucha Tecnología <br /><span
               class="text-gray-400">Poca Información</span></h2>
           <p class="text-xl text-gray-600 font-medium bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
-            Tecnología subutilizada que termina juntando polvo y no genera la rentabilidad prometida.<br /><br />
+            Tecnología subutilizada que termina juntando polvo y no cumple la expectativa prometida.<br /><br />
 
             Trampa: <strong class="text-gray-900 bg-yellow-100 px-2">comprar no es lo mismo que
-              adoptar.</strong> Datos aislados, brutos, sin conexiones no conversan entre sí.
+              adoptar.</strong> Datos aislados, brutos, sin conexiones no hablan entre sí.
             <span class="text-gray-900 bg-yellow-100 font-bold px-2">A mano el trabajo se hace imposible.</span>
             <img src="Image farmer.png" alt="Productor lechero en terreno"
               class="w-full max-w-md mx-auto mt-8 rounded-2xl shadow-lg border border-gray-200" loading="lazy" />
@@ -484,7 +491,7 @@
         <!-- PARTE 2: El Costo del Problema (Agitación) -->
         <div class="mb-20">
           <h3 class="text-2xl font-extrabold text-center text-orange-600 mb-8">¿Cuánto cuesta este problema hoy a
-            empresas y lecherías?</h3>
+            empresas?</h3>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
 
             <!-- KPI 1 -->
@@ -525,7 +532,7 @@
                 </div>
                 <p class="text-gray-600 text-sm">Pérdidas al retrasar manejos porque la persona no llegó, el reporte se
                   retrasó o falló.
-                  <strong>Multiplicado por las vacas del rebaño.</strong>
+                  <strong>Multiplicado por el rebaño.</strong>
                 </p>
               </div>
             </div>
@@ -544,9 +551,9 @@
                 <div class="text-4xl font-black text-[#6d9653] mb-2">Hasta $90 mil</div>
                 <div class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-4">No ahorrados por Vaca/Año
                 </div>
-                <p class="text-gray-600 text-sm">50% app de los costos es alimento. No integrar datos y fórmulas
-                  genéricas suman pérdidas.
-                  <strong>Precisión en la MS y ración al precio más bajo.</strong>
+                <p class="text-gray-600 text-sm">+-50% son costos de alimento. No integrar datos y fórmulas
+                  genéricas son pérdidas.
+                  <strong>Precisión óptima de MS y precio.</strong>
                 </p>
               </div>
             </div>
@@ -570,11 +577,11 @@
               class="inline-block py-1.5 px-4 rounded-full bg-white/20 text-white text-sm md:text-base font-extrabold uppercase tracking-wide mb-4 border border-white/30">
               Del Caos al Control y la Rentabilidad</span>
             <h3 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight text-blue-300">PLATAFORMA COWNECTA</h3>
-            <p class="text-xl font-medium text-[#94C973] mb-6">Monitoreo Lechero Inteligente para Lecherías de Precisión
+            <p class="text-xl font-medium text-[#94C973] mb-6"><strong>Monitoreo Inteligente para Lecherías de Precisión</strong>
             </p>
             <p class="text-gray-300 mb-8 leading-relaxed">
               Actuamos como <strong>'puente digital'</strong>. Conectamos datos de control
-              lechero, dispositivos, softwares y registros existentes para hacer tres cosas vitales para su negocio:
+              lechero, dispositivos, softwares existentes para hacer tres cosas:
             </p>
 
             <ul class="space-y-4 mb-8">
@@ -584,7 +591,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
-                <span><strong>Integra => </strong> Conecta fuentes de datos dispersas => <strong> Ahorra tiempo a la
+                <span><strong>Integrar => </strong> Conecta fuentes de datos dispersas => <strong> Ahorra tiempo a la
                     semana</strong>
               </li>
               <li class="flex items-start gap-3">
@@ -594,7 +601,7 @@
                     d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
                   </path>
                 </svg>
-                <span><strong>Procesa => </strong>Aplica algoritmos como analista => <strong> Sin errores y sin límite
+                <span><strong>Procesar => </strong>Aplica algoritmos como analista => <strong> Sin errores y sin límite
                     de vacas</strong>
               </li>
               <li class="flex items-start gap-3">
@@ -604,19 +611,18 @@
                     d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
                   </path>
                 </svg>
-                <span><strong>Simplifica => </strong> Información/reportes en pocos clicks => <strong> Precisión
-                    siempre
-                    disponible.</strong>
+                <span><strong>Simplificar => </strong> Reportes en pocos clicks => <strong> Precisión
+                    siempre disponible.</strong>
               </li>
             </ul>
           </div>
 
           <div
             class="md:w-1/2 bg-black/25 p-6 rounded-2xl border border-white/10 backdrop-blur-md text-center relative z-10">
-            <h4 class="text-2xl font-bold mb-4">¿El resultado?</h4>
+            <h4 class="text-2xl font-bold mb-4"><strong>Simplificamos lo complejo.</strong></h4>
             <p class="text-lg italic text-gray-200 mb-6">
-              "Lo que antes tomaba valiosas horas de personal, técnicos, envíos de correos y significaban costos
-              ocultos, ahora se resuelve en minutos con precisión ICAR, adaptándose a cada campo."
+              "Lo que antes tomaba horas administrativas y profesionales y significaban costos, 
+              ahora se resuelve en minutos con lineamientos ICAR. Adaptándose a cada campo."
             </p>
             <div class="flex flex-col gap-3 font-semibold text-[#94C973]">
               <span class="flex items-center justify-center gap-2">✓ No más Sensores o Softwares extras</span>
@@ -648,12 +654,11 @@
       <div class="w-full text-center mt-6 mb-8">
         <p
           class="text-gray-300 font-medium text-lg md:text-xl max-w-4xl mx-auto px-6 tracking-wide leading-relaxed bg-black/40 py-5 rounded-2xl border border-gray-800">
-          Conoces tu empresa y tienes los registros.
+          Conoces el negocio y tienes los registros.
           <br>
           No pierdas más <strong class="text-white">tiempo,</strong> ni más <strong class="text-white">errores</strong>
-          por manos inexpertas.
+          por inexpertos.
           <br>
-          <strong>Simplificamos lo complejo.</strong>
         </p>
       </div>
 
@@ -785,23 +790,23 @@
             </p>
           </div>
           <div class="md:w-2/3">
-            <h2 class="text-4xl font-bold text-white mb-6 drop-shadow-lg">Nuestro Enfoque: <br /><span
-                class="text-[#D2B48C]">Unir la Tradición del Campo con la Tecnología</span></h2>
+            <h2 class="text-4xl font-bold text-white mb-6 drop-shadow-lg">Nuestra Búsqueda: <br /><span
+                class="text-[#D2B48C]">Unir la experiencia con la Tecnología</span></h2>
 
             <p class="text-lg text-white mb-4 drop-shadow-md font-medium leading-relaxed">
               Mi pasión fue heredada de mis abuelos. Como profesional, viví en terreno las
-              complejidades de gestión en un empresa lechera. Mi curiosidad por resolver problemas
+              complejidades de una empresa lechera. Mi curiosidad por resolver problemas
               me llevó a especializarme en ciencia de datos.
               <br /><br />
-              Hoy, mis esfuerzos están dedicados a facilitar la transición: construir puentes
-              entre la práctica y las nuevas herramientas tecnológicas, <strong>siempre de manera
-                simple, útil, rentable y fundamentadas en la ciencia.</strong>
+              Hoy, mis esfuerzos están en facilitar la transición: construir conexiones
+              entre la práctica y las nuevas tecnologías.<strong> Siempre
+                simple, útil y rentable. Fundamentadas en la ciencia.</strong>
             </p>
 
             <div class="mt-8 border-l-4 border-[#94C973] pl-6 bg-black/40 p-5 rounded-r-xl shadow-2xl backdrop-blur-sm">
               <p class="text-xl text-[#94C973] font-bold italic leading-relaxed">
-                "La tecnología debe apoyar a los equipos de trabajo. Los datos deben llegar y estar
-                para tomar decisiones ágiles, precisas y óptimas en pos de mejorar la gestión lechera y las vacas."
+                "La tecnología debe apoyar a los equipos de trabajo. Los datos deben estar
+                para tomar decisiones ágiles, precisas y óptimas y mejorar la gestión lechera."
               </p>
             </div>
           </div>
@@ -862,10 +867,10 @@
                     <div class="p-8 w-full">
                       <div
                         class="bg-black/60 backdrop-blur-md border-l-4 border-[#94C973] p-6 rounded-r-xl max-w-2xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                        <h4 class="text-2xl font-bold text-white mb-2 drop-shadow-md">Monitoreo Integrado de Precisión
+                        <h4 class="text-2xl font-bold text-white mb-2 drop-shadow-md">Monitoreo 4.0 Integrado
                         </h4>
                         <p class="text-[#94C973] font-semibold text-lg drop-shadow-md">
-                          Análisis inteligente y reportes de monitoreo</p>
+                          Análisis inteligente y reportes de precisión</p>
                       </div>
                     </div>
                   </div>
@@ -901,7 +906,7 @@
                         <h4 class="text-2xl font-bold text-white mb-2 drop-shadow-md">Automatización de procesos
                         </h4>
                         <p class="text-[#94C973] font-semibold text-lg drop-shadow-md">
-                          Análisis y generación de reportes</p>
+                          Análisis y generación de informes</p>
                       </div>
                     </div>
                   </div>
@@ -916,10 +921,10 @@
                     <div class="p-8 w-full">
                       <div
                         class="bg-black/60 backdrop-blur-md border-l-4 border-[#94C973] p-6 rounded-r-xl max-w-2xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                        <h4 class="text-2xl font-bold text-white mb-2 drop-shadow-md">Análisis Genómico o de Pedigree
+                        <h4 class="text-2xl font-bold text-white mb-2 drop-shadow-md">Análisis Genómico o Pedigree
                         </h4>
                         <p class="text-[#94C973] font-semibold text-lg drop-shadow-md">
-                          Selección por biotecnología o Datos reales del rebaño</p>
+                          Selección por biotecnología o Datos reales</p>
                       </div>
                     </div>
                   </div>
@@ -934,10 +939,9 @@
                     <div class="p-8 w-full">
                       <div
                         class="bg-black/60 backdrop-blur-md border-l-4 border-[#94C973] p-6 rounded-r-xl max-w-2xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                        <h4 class="text-2xl font-bold text-white mb-2 drop-shadow-md">Integración de herramientas
-                          digitales</h4>
+                        <h4 class="text-2xl font-bold text-white mb-2 drop-shadow-md">Integración de herramientas</h4>
                         <p class="text-[#94C973] font-semibold text-lg drop-shadow-md">
-                          Digitalización, uso de softwares y dispositivos lecheros</p>
+                          Digitalización, uso de softwares y dispositivos</p>
                       </div>
                     </div>
                   </div>
@@ -1208,10 +1212,10 @@
     <section class="py-20 bg-white" id="networking">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold text-primary section-title">Presencia y Comunidad</h2>
+          <h2 class="text-4xl font-bold text-primary section-title">Comunidad y Presencia</h2>
           <p class="text-lg text-gray-600 mt-2 max-w-2xl mx-auto">
-            La innovación se practica y la tecnología se aprende. Creemos en la participación activa, el
-            intercambio de conocimientos y la construcción de redes para impulsar la lechería del futuro. Solo no se
+            La innovación se contagia y la tecnología se enseña. Creemos en la participación activa, el
+            intercambio de conocimientos y la construcción de redes para impulsar el rubro. Solo no se
             puede.
 
           </p>
@@ -1390,12 +1394,12 @@
 
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-4xl font-bold text-primary section-title">Recursos y Conocimiento</h2>
-        <p class="text-lg text-gray-600 mt-2 max-w-2xl mx-auto">Mi objetivo es compartir conocimiento práctico. Revise
-          algunos artículos o descargue mi checklist gratuito.</p>
+        <p class="text-lg text-gray-600 mt-2 max-w-2xl mx-auto">Compartir conocimiento práctico. Revise
+          algunos escritos o descargue el checklist.</p>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12 max-w-5xl mx-auto">
 
           <div class="bg-white p-6 rounded-lg shadow-md text-left">
-            <h4 class="font-bold text-secondary text-lg mb-2">Tecnología y Analítica Lechera en Chile </h4>
+            <h4 class="font-bold text-secondary text-lg mb-2">Industria Lechera 4.0 en Chile </h4>
             <p class="text-gray-600 text-sm">Nota del Consorcio Lechero: Resumen de cómo la analítica llega a la
               lechería.</p>
 
@@ -1408,7 +1412,7 @@
 
           <div class="bg-white p-6 rounded-lg shadow-md text-left">
             <h4 class="font-bold text-secondary text-lg mb-2">5 monitoreos clave en su Lechería</h4>
-            <p class="text-gray-600 text-sm">Vaya más allá de los litros. Descubra como beneficiarse del uso de datos.
+            <p class="text-gray-600 text-sm">Ir más allá de los litros y fechas. Como beneficiarse del uso de sus datos.
             </p>
 
             <a class="text-primary font-semibold mt-4 inline-block group" href="5_monitoreos_clave_Central_Cow.pdf"
@@ -1418,9 +1422,8 @@
           </div>
 
           <div class="bg-white p-6 rounded-lg shadow-md text-left">
-            <h4 class="font-bold text-secondary text-lg mb-2">SIPEC: Simplifique su cuadratura y reduzca tiempo</h4>
-            <p class="text-gray-600 text-sm">Vea cómo la tecnología y la digitalización puede transformar el
-              cumplimiento.</p>
+            <h4 class="font-bold text-secondary text-lg mb-2">SIPEC: Cuadratura simple y rápida.</h4>
+            <p class="text-gray-600 text-sm">Cómo la tecnología y la digitalización ayuda a estar al día.</p>
 
             <a class="text-primary font-semibold mt-4 inline-block group" href="SIPEC_simplifique_cuadratura.pdf"
               target="_blank" rel="noopener noreferrer">
@@ -1429,9 +1432,8 @@
           </div>
 
           <div class="bg-white p-6 rounded-lg shadow-md text-left">
-            <h4 class="font-bold text-secondary text-lg mb-2">¿Muchos Datos, Poca Información?</h4>
-            <p class="text-gray-600 text-sm">Una guía práctica para transformar sus datos acumulados en decisiones
-              trascendentes.</p>
+            <h4 class="font-bold text-secondary text-lg mb-2">Muchos Datos, Poca Información</h4>
+            <p class="text-gray-600 text-sm">Una guía para transformar datos acumulados en decisiones.</p>
 
             <a class="text-primary font-semibold mt-4 inline-block group" href="muchos_datos_poca_informacion.pdf"
               target="_blank" rel="noopener noreferrer">
@@ -1441,9 +1443,8 @@
 
         </div>
         <div class="mt-12 bg-primary text-white p-8 rounded-lg max-w-3xl mx-auto">
-          <h3 class="text-2xl font-bold">Checklist para un Monitoreo Lechero de Precisión</h3>
-          <p class="mt-2 mb-4">Una herramienta práctica para evaluar y mejorar sus procesos de gestión de rebaño a
-            tiempo.</p>
+          <h3 class="text-2xl font-bold">Checklist para un Monitoreo Lechero</h3>
+          <p class="mt-2 mb-4 font-bold text-lg text-blue-900">Una revisión para evaluar y mejorar sus procesos de gestión.</p>
 
           <!-- FORMULARIO SIN ACTION (Lo manejamos con JS abajo) -->
           <form id="checklistForm" name="descarga-checklist" method="POST" data-netlify="true"
@@ -1461,7 +1462,6 @@
               <span>Descargar Ahora</span>
             </button>
           </form>
-          <p class="text-xs text-white/70 mt-2">El archivo se abrirá en una nueva pestaña tras ingresar su correo.</p>
         </div>
 
         <!-- SCRIPT ESPECÍFICO PARA ESTE FORMULARIO -->
@@ -1516,17 +1516,16 @@
 
       <div class="container mx-auto px-6 relative z-10">
         <div class="max-w-4xl mx-auto text-center mb-16">
-          <h2 class="text-3xl md:text-5xl font-extrabold text-[#94C973] mb-6 drop-shadow-lg">Hablemos de las metas en su
-            predio</h2>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-[#94C973] mb-6 drop-shadow-lg">Hablemos de sus metas</h2>
           <p
             class="text-xl text-gray-300 max-w-2xl mx-auto font-medium leading-relaxed bg-black/30 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-xl">
-            Una primera conversación no tiene costo. Evaluaremos si podemos ayudarle a alcanzar sus metas y mejorar el
-            <strong class="text-white">Retorno de Inversión (ROI)</strong> al aplicar tecnología a su operación.
+            Conversar no tiene costo. Evaluaremos si podemos ayudar con sus metas y el
+            <strong class="text-white">Retorno de Inversión (ROI)</strong> aplicando tecnología.
           </p>
 
           <!-- Botón de WhatsApp Directo -->
           <div class="mt-8">
-            <a href="https://wa.me/5693029390?text=Hola%20Marcos!%20Me%20interesa%20conversar%20sobre%20mi%20predio..."
+            <a href="https://wa.me/56930293900?text=Hola%20Marcos!%20Me%20interesa%20conversar%20sobre%20mi%20predio..."
               target="_blank" rel="noopener noreferrer"
               class="inline-flex flex-col sm:flex-row items-center justify-center gap-3 bg-[#25D366] hover:bg-[#128c7e] text-white font-black text-xl py-4 px-10 rounded-full transition-all duration-300 shadow-xl shadow-green-900/50 hover:scale-105 border border-[#128c7e]/20">
               <svg class="w-8 h-8 fill-current drop-shadow-md" viewBox="0 0 24 24">
@@ -1541,7 +1540,7 @@
           <!-- Columna Foto -->
           <div class="lg:w-1/3 flex flex-col items-center">
             <div class="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-white/20">
-              <img alt="Marcos Fernández en consultoría" class="w-full h-80 object-cover" decoding="async"
+              <img alt="Marcos Fernández en consultoría" class="w-full h-96 object-cover" decoding="async"
                 loading="lazy" src="con las vacas2.png" />
               <div class="absolute bottom-0 w-full bg-black/50 backdrop-blur-md p-3 text-center">
                 <p class="text-white text-sm font-bold">Disponible para trabajo presencial y remoto</p>
@@ -1555,17 +1554,19 @@
               <h3 class="text-2xl font-bold text-[#94C973] mb-6 border-b border-white/10 pb-4">Detalles de Contacto</h3>
               <div class="space-y-4">
                 <p class="text-gray-200">
-                  <strong class="text-white drop-shadow block mb-1">Email:</strong>
+                  <strong class="text-white drop-shadow block mb-1">Nombre:</strong>
+                  Marcos Fernández
+                </p>
+                <p class="text-gray-200">
+                  <strong class="text-white drop-shadow block mb-1">Emails:</strong>
                   <a class="hover:text-[#94C973] transition-colors"
                     href="mailto:[EMAIL_ADDRESS]">mf@algoritmoanimal.cloud</a>
+                  <a class="hover:text-[#94C973] transition-colors"
+                    href="mailto:algoritmoanimalayaspa@gmail.com">algoritmoanimalayaspa@gmail.com</a>
                 </p>
                 <p class="text-gray-200">
                   <strong class="text-white drop-shadow block mb-1">Teléfono:</strong>
-                  <span>+56 93029390</span>
-                </p>
-                <p class="text-gray-200">
-                  <strong class="text-white drop-shadow block mb-1">Base de Operaciones:</strong>
-                  Zona Sur. Valdivia, Región de Los Ríos.
+                  <span>+56 930293900</span>
                 </p>
               </div>
             </div>
