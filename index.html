@@ -1217,7 +1217,6 @@
             La innovación se contagia y la tecnología se enseña. Creemos en la participación activa, el
             intercambio de conocimientos y la construcción de redes para impulsar el rubro. Solo no se
             puede.
-
           </p>
         </div>
 
@@ -1354,6 +1353,12 @@
             </a>
           </div>
 
+          <!-- Indicadores de desplazamiento (móvil) -->
+          <div class="md:hidden mt-2 mb-2 text-center">
+            <p class="text-sm text-gray-500 font-semibold">Desliza para ver más</p>
+            <div aria-label="Indicadores del carrusel" class="mt-2 flex justify-center gap-2" id="networking-dots"></div>
+          </div>
+
           <!-- Call to Action Footer -->
           <div class="text-center mt-10">
             <h3 class="text-xl text-gray-800 font-semibold mb-6">¿Quieres conectar o invitarme a participar en tu
@@ -1376,8 +1381,64 @@
           const container = document.getElementById('networking-scroll-container');
           const leftBtn = document.getElementById('scroll-left');
           const rightBtn = document.getElementById('scroll-right');
+          const dotsContainer = document.getElementById('networking-dots');
 
-          if (container && leftBtn && rightBtn) {
+          if (!container) return;
+
+          const cards = Array.from(container.querySelectorAll('a'));
+          let dots = [];
+
+          function getCardCenter(card) {
+            return card.offsetLeft + (card.offsetWidth / 2);
+          }
+
+          function getActiveIndex() {
+            const viewportCenter = container.scrollLeft + (container.clientWidth / 2);
+            let closestIndex = 0;
+            let minDistance = Infinity;
+
+            cards.forEach((card, index) => {
+              const distance = Math.abs(getCardCenter(card) - viewportCenter);
+              if (distance < minDistance) {
+                minDistance = distance;
+                closestIndex = index;
+              }
+            });
+
+            return closestIndex;
+          }
+
+          function updateDots() {
+            const activeIndex = getActiveIndex();
+            dots.forEach((dot, index) => {
+              if (index === activeIndex) {
+                dot.classList.remove('bg-gray-300');
+                dot.classList.add('bg-primary');
+              } else {
+                dot.classList.remove('bg-primary');
+                dot.classList.add('bg-gray-300');
+              }
+            });
+          }
+
+          if (dotsContainer && cards.length > 0) {
+            dotsContainer.innerHTML = '';
+            cards.forEach((card, index) => {
+              const dot = document.createElement('button');
+              dot.type = 'button';
+              dot.className = 'w-2.5 h-2.5 rounded-full bg-gray-300 transition-colors';
+              dot.setAttribute('aria-label', `Ir a tarjeta ${index + 1}`);
+              dot.addEventListener('click', () => {
+                const left = card.offsetLeft - ((container.clientWidth - card.clientWidth) / 2);
+                container.scrollTo({ left, behavior: 'smooth' });
+              });
+              dotsContainer.appendChild(dot);
+            });
+            dots = Array.from(dotsContainer.querySelectorAll('button'));
+            updateDots();
+          }
+
+          if (leftBtn && rightBtn) {
             leftBtn.addEventListener('click', () => {
               container.scrollBy({ left: -320, behavior: 'smooth' });
             });
@@ -1385,6 +1446,17 @@
               container.scrollBy({ left: 320, behavior: 'smooth' });
             });
           }
+
+          let ticking = false;
+          container.addEventListener('scroll', () => {
+            if (!ticking) {
+              window.requestAnimationFrame(() => {
+                updateDots();
+                ticking = false;
+              });
+              ticking = true;
+            }
+          }, { passive: true });
         });
       </script>
     </section>
@@ -1525,7 +1597,7 @@
 
           <!-- Botón de WhatsApp Directo -->
           <div class="mt-8">
-            <a href="https://wa.me/56930293900?text=Hola%20Marcos!%20Me%20interesa%20conversar%20sobre%20mi%20predio..."
+            <a href="https://wa.me/56930293900?text=Hola%20Marcos!%20Me%20interesa%20conversar%20sobre%20tus%20servicios. ¿Podemos%20agendar%20una%20reunión?"
               target="_blank" rel="noopener noreferrer"
               class="inline-flex flex-col sm:flex-row items-center justify-center gap-3 bg-[#25D366] hover:bg-[#128c7e] text-white font-black text-xl py-4 px-10 rounded-full transition-all duration-300 shadow-xl shadow-green-900/50 hover:scale-105 border border-[#128c7e]/20">
               <svg class="w-8 h-8 fill-current drop-shadow-md" viewBox="0 0 24 24">
